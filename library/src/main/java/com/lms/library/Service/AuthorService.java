@@ -1,19 +1,21 @@
 package com.lms.library.Service;
 
 import java.util.List;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
-import com.lms.library.Model.Author;
+import com.lms.library.DTO.AuthorDTO;
+
 
 @Service
 public interface  AuthorService {
 
-    public List<Author> getAuthors(Author author);
+    public List<AuthorDTO> getAuthors(AuthorDTO authorDTO);
 
-    public List<Author> getAuthorById(int id);
+    public Optional<AuthorDTO> getAuthorById(int id);
 
-    public Author addAuthor(Author author);
+    public AuthorDTO addAuthor(AuthorDTO authorDTO);
 
-    public Author updateAuthor(int id);
+    public AuthorDTO updateAuthor(AuthorDTO authorDTO);
 
     public void deleteAuthor(int id);
 }

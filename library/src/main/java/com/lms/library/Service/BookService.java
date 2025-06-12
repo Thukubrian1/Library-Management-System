@@ -1,23 +1,22 @@
-
 package com.lms.library.Service;
 
+
 import java.util.List;
-import com.lms.library.Model.Book;
+import java.util.Optional;
 import org.springframework.stereotype.Service;
+import com.lms.library.DTO.BookDTO;
 
 @Service
 public interface BookService{
 
-    public List<Book> getAllBooks();
 
-    public List<Book> getBookById(int id);
+    List<BookDTO> getAllBooks(BookDTO bookDTO);
 
-    public Book addBook(Book book);
+    Optional<BookDTO> getBookById(int id);
 
-    public void updateBook(int id);
+    BookDTO addBook(BookDTO bookDTO);
 
-    public void deleteBook(int id);
+    BookDTO updateBook(BookDTO bookDTO);
 
-    
-    
+    void deleteBookById(int id);
 }
